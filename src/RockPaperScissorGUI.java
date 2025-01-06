@@ -36,11 +36,10 @@ public class RockPaperScissorGUI extends JFrame implements ActionListener {
         setResizable(false);
 
         // Load back end object
-//        rockPaperScissorBackend = new RockPaperScissorBackend();
+        rockPaperScissorBackend = new RockPaperScissorBackend();
 
         addGUIComponents();
     }
-
 
     private void addGUIComponents()
     {
@@ -94,7 +93,6 @@ public class RockPaperScissorGUI extends JFrame implements ActionListener {
         scissorButton.setFont(new Font("Dialog", Font.PLAIN, 18));
         scissorButton.addActionListener(this);
         add(scissorButton);
-        rockPaperScissorBackend = new RockPaperScissorBackend();
 
     }
 
@@ -130,25 +128,32 @@ public class RockPaperScissorGUI extends JFrame implements ActionListener {
             }
         });
 
-
-
-        // Play again button
-        JButton resetButton = new JButton("Reset");
-        resetButton.setBounds(5, 50, 50, 15);
+        // Reset game again button
+        JButton resetButton = new JButton("Reset Game");
+        resetButton.setBounds(5, 50, 80, 15);
         resultDialog.add(resetButton, BorderLayout.SOUTH);
+
+        // Add functionality for reset game again button
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                // Reset computer score
                 computerLabel.setText("Computer: 0");
                 rockPaperScissorBackend.setComputerScores(0);
 
+                // Reset player score
                 playerLabel.setText("Player: 0");
                 rockPaperScissorBackend.setPlayerScores(0);
 
+                // Reset computer choice
                 computerChoice.setText("?");
+
+                // Close dialog
                 resultDialog.dispose();
             }
         });
+
         // Add play again button into the dialog window, set into south
         resultDialog.add(playAgainButton, BorderLayout.SOUTH);
         resultDialog.setLocationRelativeTo(null);
@@ -167,7 +172,7 @@ public class RockPaperScissorGUI extends JFrame implements ActionListener {
         // Retrieve player's choice
         String playerChoice = e.getActionCommand();
 
-        // Get result from backend to display in the dialog
+        // Get result from back end to display in the dialog
         String result = rockPaperScissorBackend.playRockPaperScissor(playerChoice);
 
         // Get the computer choice from backend to display in frontend
@@ -175,7 +180,6 @@ public class RockPaperScissorGUI extends JFrame implements ActionListener {
 
         // Get the computer scores from backend and display in front end
         computerLabel.setText("Computer: " + rockPaperScissorBackend.getComputerScores());
-
         playerLabel.setText("Player: " + rockPaperScissorBackend.getPlayerScores());
 
         showDialog(result).setVisible(true);

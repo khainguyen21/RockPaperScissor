@@ -19,16 +19,16 @@ public class RockPaperScissorBackend {
         this.computerScores = computerScores;
     }
 
+    public int getPlayerScores() {
+        return playerScores;
+    }
+
     public void setPlayerScores(int playerScores) {
         this.playerScores = playerScores;
     }
 
     public String getComputerChoice() {
         return computerChoice;
-    }
-
-    public int getPlayerScores() {
-        return playerScores;
     }
 
     public RockPaperScissorBackend()

@@ -1,4 +1,4 @@
-# Rock Paper Scissors GUI Game
+# Rock Paper Scissors Game
 
 This is a simple **Rock-Paper-Scissors** game implemented in Java using the Swing framework for the graphical user interface (GUI). It allows players to compete against the computer, keeping track of scores and providing a dialog for game results.
 

@@ -19,4 +19,4 @@ This is a simple **Rock-Paper-Scissors** game implemented in Java using the Swin
 
 2. **Clone the Repository**:
    ```bash
-   git clone [https://github.com/yourusername/RockPaperScissorsGUI.git](https://github.com/khainguyen21/simple_rockpaperscissor_game.git)
+   git clone [https://github.com/khainguyen21/simple_rockpaperscissor_game.git]

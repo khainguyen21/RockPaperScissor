@@ -20,3 +20,7 @@ This is a simple **Rock-Paper-Scissors** game implemented in Java using the Swin
 2. **Clone the Repository**:
    ```bash
    git clone [https://github.com/khainguyen21/simple_rockpaperscissor_game.git]
+
+## Picture
+<img width="445" alt="Screenshot 2025-01-07 at 10 43 44 PM" src="https://github.com/user-attachments/assets/1263d941-668f-4a86-afd3-8299d9feaee6" />
+<img width="449" alt="Screenshot 2025-01-07 at 10 43 28 PM" src="https://github.com/user-attachments/assets/6458295d-cfd1-4961-ba06-dbb109a2687c" />
